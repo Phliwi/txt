@@ -2,3 +2,24 @@
 Вопрос связан с запуском сайта доставки в Хлебомясъ.
 
 Разбираюсь с Ремонтами.
+
+
+Доступы к Апи Италиани
+[11:53, 19.07.2019] Ramil: italiani65
+[11:53, 19.07.2019] Ramil: Qaz12345
+
+
+
+https://iiko.biz:9900/api/0/rmsSettings/getPaymentTypes?access_token=fZt9DK5JGenRxAIhSjd5if8-UzaHfWW5NHVSAw_ml5elL5S01A3oL54VRavhK2mrLQYYDnc9kmiPZ7P3KhI1Sw2&organization=ff41a1d8-e67a-11e8-80d5-d8d385655247
+
+
+
+
+на скрине стоит
+name	"Онлайн оплата Деливери"
+ONLIN
+
+
+пришло с сайта
+"Оплата с сайта доставки"
+DOSTS
