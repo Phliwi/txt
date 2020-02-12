@@ -1,3 +1,10 @@
+Чейн Harley Davidson Saloon ЦО
+Server                      1
+iikoRMS  (Integration)      14
+iikoChain(Store Connector)  8
+iikoApi                     2 до 13.08.2020
+iikoChainOperation  (Chain)      14
+
 ==================================
 РМС Снабжение      969-552-457
 ==================================
