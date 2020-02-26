@@ -1,0 +1,57 @@
+Скрипт для пабов. Помечаем на удалении некоторые концепции
+
+Помечаем на удаление...
+
+
+23190a60-94d2-4682-94c6-34b3ccff2fec  Паб Брюгге
+4381ffe5-e88e-4b3d-aada-7251bffc87c1  Паб Брюссель
+0d415906-e1cc-4ddf-bb80-7b25a99de0df  Паб Ватерлоо
+bd0839d2-fccd-4db5-afa4-a326de9c8aa5  Паб Гент
+f4a4890f-8f05-40e2-93db-f314d80348d6  Паб Арден
+2609b25f-2180-bf98-5c1c-967664eea837  Без концепции
+715f7a3a-32f0-4d8d-ae5d-ea38c7804154  Фестиваль Ватерзой
+c56eed4f-e048-4e70-be19-088e10cc6ceb  ОП Выездная торговля
+
+select * from entity
+where id in (
+'23190a60-94d2-4682-94c6-34b3ccff2fec',
+'4381ffe5-e88e-4b3d-aada-7251bffc87c1',
+'0d415906-e1cc-4ddf-bb80-7b25a99de0df',
+'bd0839d2-fccd-4db5-afa4-a326de9c8aa5',
+'f4a4890f-8f05-40e2-93db-f314d80348d6',
+'2609b25f-2180-bf98-5c1c-967664eea837',
+'715f7a3a-32f0-4d8d-ae5d-ea38c7804154',
+'c56eed4f-e048-4e70-be19-088e10cc6ceb'
+)
+
+
+
+
+import resto.db.Guid;
+import resto.external.egais.model.incoming.EgaisIncomingInvoice;
+import resto.external.egais.model.incoming.EgaisIncomingInvoiceConfirmStatus;
+import resto.external.egais.model.incoming.EgaisIncomingInvoiceStatus;
+
+em.runTransacted() {
+   EgaisIncomingInvoice invoice = em.getStrict(EgaisIncomingInvoice.class, Guid.parseUUID("1FB6C85D-CD72-37E4-0156-2F084825B1DA"));
+   invoice.setStatus(EgaisIncomingInvoiceStatus.CONFIRMED);
+   invoice.setConfirmStatus(EgaisIncomingInvoiceConfirmStatus.CONFIRMED);
+   out.println(invoice);
+}
+
+
+
+
+
+
+import resto.db.Guid;
+import resto.external.egais.model.incoming.EgaisIncomingInvoice;
+import resto.external.egais.model.incoming.EgaisIncomingInvoiceConfirmStatus;
+import resto.external.egais.model.incoming.EgaisIncomingInvoiceStatus;
+
+em.runTransacted() {
+   EgaisIncomingInvoice invoice = em.getStrict(EgaisIncomingInvoice.class, Guid.parseUUID("1FB6C85D-CD72-37E4-0156-2F084825B1DA"));
+   invoice.setStatus(EgaisIncomingInvoiceStatus.CONFIRMED);
+   invoice.setConfirmStatus(EgaisIncomingInvoiceConfirmStatus.CONFIRMED);
+   out.println(invoice);
+}
